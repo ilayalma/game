@@ -1,16 +1,17 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
 <title>proffesional mode</title>
 <style type="text/css">
 body {text-align:center;}
-canvas { border:5px dotted #ccc; }
+canvas { border:35px dotted #ccc; }
 h1 { font-size:50px; text-align: center; margin: 0; padding-bottom: 25px;}
 </style>
 <script type="text/javascript">
 function play_game()
 {
-var level = 60; // Game level, by decreasing will speed up
+var level = 40; // Game level, by decreasing will speed up
 var rect_w = 45; // Width
 var rect_h = 30; // Height
 var inc_score = 50; // Score
@@ -135,19 +136,22 @@ sum+= code
 <h1>Snake Game by Ilay David</h1>
 <div id="msg"></div>
 <canvas id="playArea" width="450" height="300"></canvas>
-
-
-
+</body>
 <script type="text/javascript">
-	document.onkeypress = function(evt) {
+
+	function refresh() {
+		window.location.reload
+	}
+
+
+document.onkeypress = function(evt) {
     evt = evt || window.event;
     console.log(evt.keyCode)
     if(evt.keyCode == 47){
     	window.location.reload();
     }
 };
-
 </script>
-</body>
+
 &copy; 2018- <?php echo date("Y"); ?>
 </html>
