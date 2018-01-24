@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>ilay snake</title>
+<title>proffesional mode</title>
 <style type="text/css">
 body {text-align:center;}
 canvas { border:5px dotted #ccc; }
@@ -131,10 +131,23 @@ sum+= code
 </script>
 </head>
 <body onload="play_game()">
-	<a href="pgame.html">proffesional mode</a>
+	<a href="game.html">normal</a>
 <h1>Snake Game by Ilay David</h1>
 <div id="msg"></div>
-<canvas id="playArea" width="450" height="300"><a href="https://www.facebook.com/mayur.subhedar">Sorry your browser does not support HTML5</a></canvas>
+<canvas id="playArea" width="450" height="300"></canvas>
+
+
+
+<script type="text/javascript">
+	document.onkeypress = function(evt) {
+    evt = evt || window.event;
+    console.log(evt.keyCode)
+    if(evt.keyCode == 47){
+    	window.location.reload();
+    }
+};
+
+</script>
 </body>
 &copy; 2018- <?php echo date("Y"); ?>
 </html>
