@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body {
+			font-size: 200%;
+		}
+		#btno {
+			border: none;
+			color: white;
+			cursor: pointer;
+			padding: 14px 28px;
+			background-color: #2196F3;
+			font-size: 14px;
+		}
+		#btns {
+			border: none;
+			color: white;
+			cursor: pointer;
+			padding: 14px 28px;
+			background-color: #2196F3;
+			font-size: 14px;
+		}
+		#Hval {
+			color: #5c6bc0;
+		}
+	</style>
+	<title>stock</title>
+</head>
+<body>
+<p>helicopter value:</p><p id="Hval">click on day!</p>
+<p>helicopters:</p><p id="helicopters"><span style="color: #5c6bc0">click on buy!</span></p>
+<script type="text/javascript">
+	var money = 1000;
+			
+
+ var heli = 0;
+function buy_heli() {
+
+	money -= ranval;
+	document.getElementById("money").innerHTML = "Money:" + money;
+heli++;
+document.getElementById("helicopters").innerHTML = heli;
+
+
+}
+
+window.random_val = ((1000+(Math.random() * 40000)) / 1000).toFixed(3);
+
+
+function generate_rnum() {
+window.ranval = document.getElementById("Hval").innerHTML = ((1000+(Math.random() * 40000)) / 1000).toFixed(3);
+
+}
+
+
+</script>
+<p id="money"></p>
+<button id="btno" onclick="buy_heli()">buy heli!</button>
+<button id="btns" onclick="generate_rnum()">day</button>
+
+ <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+</body>
+</html>
