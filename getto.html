@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.bank {
+			position:absolute;
+			left: 400px; 
+		}
+	</style>
+	<title>click</title>
+</head>
+<body>
+<script type="text/javascript">
+	var clicks = 0;
+	function onClick() {
+		clicks += 1;
+		document.getElementById("clicks").innerHTML = clicks;
+	};
+
+
+
+var heli = 0 ;
+
+function heli_buy() {
+	
+
+	
+
+	heli += 1;
+	clicks -= 10;
+	 document.getElementById("heli").innerHTML = heli;
+	 	document.getElementById("clicks").innerHTML = clicks;
+}
+var	bases = 0;
+	function buy_base() {
+		bases += 1;
+		heli -= 10;
+		clicks -= 100;
+		document.getElementById("clicks").innerHTML = clicks;
+		document.getElementById("heli").innerHTML = heli;
+		document.getElementById("bases").innerHTML = bases;
+	}
+
+	function loan1() {
+		clicks += 1000;
+		document.getElementById("clicks").innerHTML = clicks;
+	}
+
+function ploan() {
+	var pro = prompt();
+	 clicks += parseInt(pro);
+	document.getElementById("clicks").innerHTML = clicks;
+}
+function give_bank() {
+	var prog = prompt();
+	clicks -= parseInt(prog);
+	document.getElementById("clicks").innerHTML = clicks;
+}
+</script>
+<button type="button" onClick="onClick()">clickme</button>
+<button type="button" onclick="heli_buy()">buy helicopter</button>
+<button onclick="buy_base()">buy base</button>
+<p>money:</p><p id="clicks">0</p>
+helicopters:<p id="heli">0</p>
+bases:<p id="bases">0</p>
+
+<div class="bank">
+<h1>bank</h1>
+<button onclick="loan1()">loan of thousand dollars</button>
+<button onclick=ploan()>djsk</button>
+<button onclick="give_bank()">give bank</button>
+</div>
+</body>
+</html>
